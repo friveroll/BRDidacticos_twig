@@ -3,6 +3,7 @@
 
 # Composer PHAR
 /composer.phar
+/composer.lock
 
 # -- Editores -----------------------------------------
 # vim
