@@ -17,3 +17,4 @@ Session.vim
 /*.sublime-project
 *.sublime-workspace
 
+/.idea/

@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be425ff-2272-4c98-915c-68c81dd8fef2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/shared/_header.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/acerca.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/br-index.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/contacto.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/gc2-mini.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/labq2.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/lp.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/md-btd.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/sensores.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/svis-pl.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/vdc-btd.twig" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/master.twig" afterPath="$PROJECT_DIR$/views/layouts/master.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BRDidacticos_twig.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="master.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="master.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layouts/master.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25957447" vertical-offset="105" max-vertical-offset="846">
+            <state vertical-scroll-proportion="-6.7777777" vertical-offset="105" max-vertical-offset="846">
               <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.475" vertical-offset="0" max-vertical-offset="720">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -83,6 +83,7 @@
       <list>
         <option value="$PROJECT_DIR$/views/shared/_header.twig" />
         <option value="$PROJECT_DIR$/views/layouts/master.twig" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -297,8 +298,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layouts/master.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25957447" vertical-offset="105" max-vertical-offset="846">
+        <state vertical-scroll-proportion="-6.7777777" vertical-offset="105" max-vertical-offset="846">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.475" vertical-offset="0" max-vertical-offset="720">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
