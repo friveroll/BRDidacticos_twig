@@ -8,7 +8,7 @@ use Cocur\Slugify\Slugify;
 
 $request = Request::createFromGlobals();
 $uri = $request->getPathInfo();
-$loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
+$loader = new Twig_Loader_Filesystem(__DIR__.'/views');
 $twig = new Twig_Environment($loader, array(
     // cache disabled, since this is just a testing project
     'cache' => false,
