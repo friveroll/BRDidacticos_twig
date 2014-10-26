@@ -4,6 +4,7 @@
 # Composer PHAR
 /composer.phar
 /composer.lock
+/cache
 
 # -- Editores -----------------------------------------
 # vim

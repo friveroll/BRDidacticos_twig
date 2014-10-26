@@ -16,30 +16,58 @@ $twig = new Twig_Environment($loader, array(
     'strict_variables' => true
     ));
 
-$twig->addExtension(new SlugifyExtension(Slugify::create()));
 $twig->addExtension(new Twig_Extension_Debug());
+$twig->addExtension(new SlugifyExtension(Slugify::create()));
+$slugify = new Slugify();
+
 
 switch ($uri) {
-    // The Homepage! (/)
     case '/':
-        echo $twig->render('homepage.twig');
-
+        echo $twig->render('br-index.twig');
         break;
 
-    case '/contact':
-        echo $twig->render('contact.twig', array(
-            'pageData' => array(
-                'title' => 'Find us in the south pole!',
-            )
-        ));
+    case '/sensores-vernier':
+        echo $twig->render('sensores.twig');
         break;
+
+    case '/sensores/sensor-de-movimiento':
+    	echo $twig->render('md-btd.twig');
+    	break;
+
+    case '/sensores/contador-de-gotas':
+    	echo $twig->render('vdc-btd.twig');
+    	break;
+
+    case '/sensores/cromatografo-de-gases-mini-gc-plus':
+    	echo $twig->render('gc2-mini.twig');
+    	break;
+
+    case 'sensores/espectrofotometro-spectrovis-plus':
+    	echo $twig->render('svis.pl.twig');
+    	break;
+
+    case '/interfaces/labquest-2':
+    	echo $twig->render('labq2.twig');
+    	break;
+
+    case '/software/logger-pro':
+    	echo $twig->render('lp.twig');
+    	break;
+
+    case 'acerca':
+    	echo $twig->render('acerca.twig');
+    	break;
+
+    case 'contacto':
+    	echo $twig->render('contacto.twig');
+    	break;
 
     // All other pages
-    default:
-        // if we have anything else, render the URL + .twig (e.g. /about -> about.twig)
-        $template = substr($uri, 1).'.twig';
+    // default:
+    //     // if we have anything else, render the URL + .twig (e.g. /about -> about.twig)
+    //     $template = substr($uri, 1).'.twig';
 
-        echo $twig->render($template, array(
-            'title' => 'Some random page!',
-        ));
+    //     echo $twig->render($template, array(
+    //         'title' => 'Some random page!',
+    //     ));
 }
