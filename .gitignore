@@ -17,4 +17,5 @@ Session.vim
 /*.sublime-project
 *.sublime-workspace
 
-/.idea/
+# phpstorm
+.idea/

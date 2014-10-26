@@ -1,0 +1,80 @@
+@import url('/css/custom.css');
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+    background-color: #503CA1;
+    color: #FFFFFF;
+}
+.nav-pills > li > a {
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.nav-tabs > li > a, .nav-pills > li > a {
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.nav > li > a {
+    display: block;
+}
+a {
+    color: #503CA1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7D3BC1;
+    text-decoration: underline;
+}
+:-moz-any-link {
+    cursor: pointer;
+}
+
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #7463A5;
+  background: rgba(116, 99, 161, 0.75);
+  color: #FFFFFF;
+  font: 400 14px/1.6 'Open Sans', Verdana, Helvetica, sans-serif;
+  /*font-size: 8px;*/
+  text-align: center;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-caption p {
+  margin-bottom: 0;
+}
+h1
+{
+  text-align: center; 
+}
+
+
+
+/*a.pdf {
+	color: #c00;
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 10px;
+	background-image: url(pdf_icon.gif) no-repeat;
+}
+a.pdf:hover {
+	text-decoration: underline;
+}*/

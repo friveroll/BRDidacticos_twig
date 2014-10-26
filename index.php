@@ -17,8 +17,6 @@ $twig = new Twig_Environment($loader, array(
     ));
 
 $twig->addExtension(new Twig_Extension_Debug());
-$twig->addExtension(new SlugifyExtension(Slugify::create()));
-$slugify = new Slugify();
 
 
 switch ($uri) {
