@@ -1,0 +1,13 @@
+<div class="navbar">
+    <div class="navbar-inner">
+        <ul class="nav">
+            {% for item in data['items'] %}
+                <li{% if item.link == data['current_url'] %} class="active"{% endif %}><a href={{ item.link }} ><i class={{ item.icon }}></i>{{ item.text }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+
+

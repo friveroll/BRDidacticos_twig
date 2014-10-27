@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/src/menu-items.php';
 
 use Symfony\Component\HttpFoundation\Request;
 use Cocur\Slugify\Bridge\Twig\SlugifyExtension;
@@ -17,15 +18,18 @@ $twig = new Twig_Environment($loader, array(
     ));
 
 $twig->addExtension(new Twig_Extension_Debug());
-
+$data = [
+    'current_url' => trim($uri, '/'),
+    'items' => $items
+];
 
 switch ($uri) {
     case '/':
-        echo $twig->render('br-index.twig');
+        echo $twig->render('index.twig', array('data' => $data));
         break;
 
     case '/sensores-vernier':
-        echo $twig->render('sensores.twig');
+        echo $twig->render('index.twig', array('data' => $data));
         break;
 
     case '/sensores/sensor-de-movimiento':

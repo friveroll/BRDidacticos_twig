@@ -3,43 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block meta_seo %}{% endblock %}
-    <link rel="stylesheet" href="{{'assets/css/master.min.css'}}"/>
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-39149409-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../../assets/css/master.min.css"/>
 </head>
 <body>
-    <article class="container-fluid main-container">
+    <div class="container-fluid main-container">
         {% include "shared/_header.twig" %}
-
-        <section class="container-fluid">
-            {% block content %}{% endblock %}
-        </section>
-
-    </article>
-
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <p class="author pull-right"><a href="http://feliperiveroll.name"><i class="icon-suitcase"></i> <small>Diseño: Felipe Riveroll Aguirre</small></a></p>
-                <p class="author"><a href="http://brconsultores.org">BRConsultores &copy; 2013</a></p>
-            </div>
-        </div>
-    </footer>
-    {% block scripts %}
-        <script src="{{'assets/css/master.min.css'}}" ></script>
-    {% endblock %}
+        {% include "shared/_menu.twig" %}
+        {% block content %}{% endblock %}
+    </div>
+<script type="text/javascript" src="../../assets/js/master.min.js"></script>
 </body>
 </html>
