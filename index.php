@@ -1,11 +1,8 @@
 <?php
 
 require __DIR__.'/vendor/autoload.php';
-require __DIR__ . '/src/menu-items.php';
 
 use Symfony\Component\HttpFoundation\Request;
-use Cocur\Slugify\Bridge\Twig\SlugifyExtension;
-use Cocur\Slugify\Slugify;
 
 $request = Request::createFromGlobals();
 $uri = $request->getPathInfo();
@@ -19,8 +16,7 @@ $twig = new Twig_Environment($loader, array(
 
 $twig->addExtension(new Twig_Extension_Debug());
 $data = [
-    'current_url' => trim($uri, '/'),
-    'items' => $items
+    'current_url' => trim($uri, '/')
 ];
 
 switch ($uri) {

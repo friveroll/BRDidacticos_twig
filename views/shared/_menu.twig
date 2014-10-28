@@ -1,13 +1,26 @@
 <div class="navbar">
     <div class="navbar-inner">
         <ul class="nav">
-            {% for item in data['items'] %}
-                <li{% if item.link == data['current_url'] %} class="active"{% endif %}><a href={{ item.link }} ><i class={{ item.icon }}></i>{{ item.text }}</a></li>
-            {% endfor %}
+            <li {% if data['current_url'] == "" %}class="active"{% endif %}>
+                <a href="/">
+                    <i class="icon-home"></i> Inicio
+                </a>
+            </li>
+            <li {% if 'acerca' == data['current_url'] %}class="active"{% endif %}>
+                <a href="acerca" >
+                    <i class="icon-info-sign"></i> Acerca
+                </a>
+            </li>
+            <li {% if 'sensores-vernier' == data['current_url'] %}class="active"{% endif %}>
+                <a href="sensores-vernier">
+                    <i class="icon-circle-blank"></i> Sensores
+                </a>
+            </li>
+            <li {% if 'contacto' == data['current_url'] %}class="active"{% endif %}>
+                <a href="contacto">
+                    <i class="icon-envelope"></i> Contacto
+                </a>
+            </li>
         </ul>
     </div>
 </div>
-
-
-
-
