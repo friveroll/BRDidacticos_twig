@@ -21,11 +21,11 @@ $data = [
 
 switch ($uri) {
     case '/':
-        echo $twig->render('index.twig', array('data' => $data));
+        echo $twig->render('br-index.twig', array('data' => $data));
         break;
 
     case '/sensores-vernier':
-        echo $twig->render('index.twig', array('data' => $data));
+        echo $twig->render('sensores.twig', array('data' => $data));
         break;
 
     case '/sensores/sensor-de-movimiento':
