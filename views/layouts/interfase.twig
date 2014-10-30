@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta_seo %}{% endblock %}
+        <link rel="stylesheet" href="../../assets/css/master.min.css"/>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div itemscope itemtype="http://schema.org/Product">
+    <div class="container-fluid main-container">
+        {% include "shared/_header.twig" %}
+        {% include "shared/_menu.twig" %}
+
+
+        <div class="container-fluid">
+            <div class="well">
+                    <section class="row-fluid">
+                        <h1>
+                            <span itemprop="name">
+                                {% block title2 %}{% endblock %}
+                            </span>
+                        </h1>
+
+                        <!--Gallery-->
+                        <section class="row-fluid">
+                            <div class="span3"></div>
+                            <div class="thumbnail span6">
+                                <div id="gallery">
+                                    <div id="panel" class="product-gallery">
+                                        {% block gallery_main_image %}{% endblock %}
+                                        <div id="description" class="carousel-caption">
+                                             {% block gallery_main_desc %}{% endblock %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span3"></div>
+                        </section>
+                    </section>
+
+                <section class="row-fluid">
+                    <div class="span1"></div>
+                    <div id="thumbs" class="center">
+                        <ul class="thumbnails">
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    {% block gallery_image_thumb_1%}{% endblock %}
+                                </a>
+                            </li>
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    {% block gallery_image_thumb_2%}{% endblock %}
+                                </a>
+                            </li>
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    {% block gallery_image_thumb_3%}{% endblock %}
+                                </a>
+                            </li>
+                            <li class="span2">
+                                <a href="#" class="thumbnail">
+                                    {% block gallery_image_thumb_4%}{% endblock %}
+                                </a>
+                            </li>
+                            <li class="span2">
+                                <a href="#youtube" class="thumbnail video" role="button" data-toggle="modal">
+                                    {% block gallery_image_thumb_5%}{% endblock %}
+                                </a>
+                            </li>
+                        </ul>
+                        <div id="youtube" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">
+                                    {% block youtube_label%}{% endblock %}
+                                </h3>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-br" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#descripcion" data-toggle="tab">Descripción</a></li>
+                    <li><a href="#sensores" data-toggle="tab" class="tab">Sensores</a></li>
+                    <li><a href="#spec" data-toggle="tab" class="tab">Especificaciones</a></li>
+                    <li><a href="#soporte" data-toggle="tab" class="tab">Soporte</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active in" id="descripcion">
+                        {% block descripcion %}{% endblock %}
+                    </div>
+                    <div class="tab-pane fade" id="sensores">
+                        {% block sensores %}{% endblock %}
+                    </div>
+                    <div class="tab-pane fade" id="spec">
+                        {% block spec %}{% endblock %}
+                    </div>
+                    <div class="tab-pane fade" id="soporte">
+                        <div class="container-fluid">
+                            <section class="row-fluid">
+                                <div class="span6">
+                                    <h3>Manual del Usuario</h3>
+                                    <ul>
+                                        <li>
+                                            {% block soporte_manual %}{% endblock %}
+                                        </li>
+                                    </ul>
+                                    <h3>Recursos en línea</h3>
+                                    <ul>
+                                        {% block soporte_renlinea %}{% endblock %}
+                                        <li>
+                                            <a href="http://www.vernier.com/forums/" rel="nofollow">
+                                                Foros de discusi&oacute;n
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h3>Garantía</h3>
+                                    <ul>
+                                    {% block soporte_garantia %}
+                                        <li>
+                                            <a href="http://www.vernier.com/ordering/warranty-policy/" rel="nofollow">
+                                                Garantía limitada de 5 a&nacute;os
+                                            </a>
+                                        </li>
+                                    {% endblock %}
+                                    </ul>
+                                </div>
+                                <div class="span6">
+                                    <h3>Contáctenos</h3>
+                                    <ul>
+                                        <li>Teléfono</li>
+                                        <li>Correo</li>
+                                    </ul>
+                                    <h3>Refacciones</h3>
+                                    <ul>
+                                        {% block refacciones %}{% endblock %}
+                                    </ul>
+                                </div>
+                            </section><!--termina row-fluid-->
+                        </div><!--termina container fluid-->
+                    </div>
+                    <section class="row-fluid">
+                        <div class="span6">
+                            <h2>Que está incluido</h2>
+                            {% block incluido %}{% endblock %}
+                        </div>
+                        {% block actualizaciones %}{% endblock %}
+                    </section>
+                    {% block ultima_seccion %}{% endblock %}
+
+                </div>
+            </div>
+        </div>
+
+        {% include "shared/_footer.twig" %}
+    </div>
+</div>
+    <script type="text/javascript" src="../../assets/js/producto.min.js"></script>
+</body>
+</html>

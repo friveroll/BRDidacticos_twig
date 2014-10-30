@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta_seo %}{% endblock %}
+    {% block styles %}
+        <link rel="stylesheet" href="../../assets/css/master.min.css"/>
+    {% endblock %}
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="../../assets/css/master.min.css"/>
 </head>
 <body>
     <div class="container-fluid main-container">
         {% include "shared/_header.twig" %}
         {% include "shared/_menu.twig" %}
         {% block content %}{% endblock %}
+        {% include "shared/_footer.twig" %}
     </div>
-<script type="text/javascript" src="../../assets/js/master.min.js"></script>
+
+    {% block scripts %}
+        <script type="text/javascript" src="../../assets/js/master.min.js"></script>
+    {% endblock %}
 </body>
 </html>
